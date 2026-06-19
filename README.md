@@ -1,66 +1,731 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# PHP_Laravel10_Shortcodes
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+## Project Description
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+PHP_Laravel10_Shortcodes is a Laravel 10-based dynamic shortcode processing application that demonstrates how custom shortcodes can be converted into HTML output using a shortcode parsing system.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The project allows users to write WordPress-like shortcodes inside a text editor and automatically renders them into styled HTML components such as alerts, badges, and buttons. It uses the tehwave/laravel-shortcodes package to handle shortcode compilation and provides a clean, modern UI for input and preview.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This project is designed to showcase custom shortcode implementation, Laravel package integration, and dynamic content rendering.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Key Features
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+🔹 WordPress-like Shortcode System
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+🔹 Custom Shortcodes (Alert, Badge, Button)
 
-## Laravel Sponsors
+🔹 Dynamic Shortcode Parsing to HTML
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+🔹 Live Preview of Rendered Output
 
-### Premium Partners
+🔹 Laravel 10 Integration
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+🔹 Clean and Modern UI Design
 
-## Contributing
+🔹 Bootstrap-based Responsive Layout
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+🔹 Secure and Scalable Architecture
 
-## Code of Conduct
+🔹 Easy-to-Extend Shortcode System
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+🔹 Reusable Component-based Structure
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+## Technologies Used
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* Laravel 10
+* PHP 8+
+* MySQL
+* Bootstrap 5
+* HTML5
+* CSS3
+* Laravel Blade Templates
+* Composer
+* tehwave/laravel-shortcodes Package
+
+
+
+## Project Highlights
+
+✨ Implementation of WordPress-style shortcodes in Laravel
+✨ Custom shortcode classes for reusable UI components
+✨ Real-time parsing of user input into HTML output
+✨ Clean MVC architecture (Controller + Views + Config)
+✨ Package-based integration for scalability
+✨ Modern dark-themed UI for better UX
+✨ Beginner-friendly and interview-ready project
+
+
+
+## Application Flow
+
+1. User opens the Shortcode Editor page
+2. User writes shortcodes in textarea
+3. System sends content to controller
+4. Laravel Shortcode package parses content
+5. Shortcodes are converted into HTML
+6. Rendered output is displayed on preview panel
+7. User views formatted UI components instantly
+
+
+## Requirements
+
+- PHP 8.1+
+- Composer
+- MySQL
+- Laravel 10
+- Node.js (optional for frontend assets)
+
+
+---
+
+
+
+## Installation Steps
+
+
+---
+
+
+## STEP 1: Create Laravel 10 Project
+
+### Open terminal / CMD and run:
+
+```
+composer create-project laravel/laravel PHP_Laravel10_Shortcodes "10.*"
+
+```
+
+### Go inside project:
+
+```
+cd PHP_Laravel10_Shortcodes
+
+```
+
+#### Explanation:
+
+Creates a fresh Laravel 10 application using Composer.
+
+This is the base structure for building the Shortcodes system.
+
+
+
+
+## STEP 2: Database Setup 
+
+### Update database details:
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel10_shortcodes
+DB_USERNAME=root
+DB_PASSWORD=
+
+```
+
+### Create database in MySQL / phpMyAdmin:
+
+```
+Database name: laravel10_shortcodes
+
+
+```
+
+
+
+#### Explanation:
+
+Configures MySQL connection inside .env file.
+
+Database stores all application data like posts and content.
+
+
+
+
+## STEP 3: Install Package
+
+### Run:
+
+```
+composer require tehwave/laravel-shortcodes
+
+```
+
+#### Explanation:
+
+Installs tehwave/laravel-shortcodes via Composer.
+
+This package provides shortcode parsing functionality.
+
+
+
+
+## STEP 4: Publish Configuration
+
+### Run:
+
+```
+php artisan vendor:publish --provider="Tehwave\Shortcodes\ShortcodesServiceProvider"
+
+```
+
+#### Explanation:
+
+Publishes package config into Laravel project.
+
+Allows customization of shortcode behavior and settings.
+
+
+
+
+
+## STEP 5: Create Shortcodes Folder
+
+
+### Make:
+
+```
+app/
+└── Shortcodes/
+    ├── AlertShortcode.php
+    ├── ButtonShortcode.php
+    └── BadgeShortcode.php
+
+```
+
+### app/Shortcodes/AlertShortcode.php
+
+```
+<?php
+
+namespace App\Shortcodes;
+
+use tehwave\Shortcodes\Shortcode;
+
+class AlertShortcode extends Shortcode
+{
+    protected $tag = 'alert';
+
+    public function handle(): ?string
+    {
+        return '<div class="alert alert-warning">'
+            . $this->body .
+            '</div>';
+    }
+}
+
+```
+
+
+### app/Shortcodes/ButtonShortcode.php
+
+```
+<?php
+
+namespace App\Shortcodes;
+
+use tehwave\Shortcodes\Shortcode;
+
+class ButtonShortcode extends Shortcode
+{
+    protected $tag = 'button';
+
+    public function handle(): ?string
+    {
+        $url = $this->attributes['url'] ?? '#';
+
+        return sprintf(
+            '<a href="%s" target="_blank" class="btn btn-primary">
+                %s
+            </a>',
+            $url,
+            $this->body
+        );
+    }
+}
+
+```
+
+### app/Shortcodes/BadgeShortcode.php
+
+```
+<?php
+
+namespace App\Shortcodes;
+
+use tehwave\Shortcodes\Shortcode;
+
+class BadgeShortcode extends Shortcode
+{
+    protected $tag = 'badge';
+
+    public function handle(): ?string
+    {
+        return '<span class="badge bg-success">'
+            .$this->body.
+            '</span>';
+    }
+}
+
+```
+
+#### Explanation: 
+
+Creates custom shortcode classes (Alert, Button, Badge).
+
+Each class defines how a shortcode will render HTML.
+
+
+
+
+## STEP 6: Update Config File
+
+### config/shortcode.php
+
+```
+<?php
+
+return [
+    'shortcodes' => [
+        'alert' => App\Shortcodes\AlertShortcode::class,
+        'badge' => App\Shortcodes\BadgeShortcode::class,
+        'button' => App\Shortcodes\ButtonShortcode::class,
+    ],
+];
+
+```
+
+
+#### Explanation: 
+
+Registers all shortcode classes inside config/shortcode.php.
+
+Laravel uses this file to map tags to classes.
+
+
+
+## STEP 7: Create Controller
+
+### Run:
+
+```
+php artisan make:controller ShortcodeController
+
+```
+
+### app/Http/Controllers/ShortcodeController.php
+
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use tehwave\Shortcodes\Shortcode;
+
+class ShortcodeController extends Controller
+{
+    public function index()
+    {
+        return view('shortcodes.index');
+    }
+
+    public function parse(Request $request)
+    {
+        $content = $request->content;
+
+        $parsedContent = Shortcode::compile($content);
+
+        return view(
+            'shortcodes.index',
+            compact('content', 'parsedContent')
+        );
+    }
+}
+
+```
+
+
+#### Explanation: 
+
+Handles input and processes shortcode parsing logic.
+
+Converts raw shortcode text into HTML output.
+
+
+
+
+
+## STEP 8: Add Routes
+
+### routes/web.php
+
+```
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShortcodeController;
+
+Route::get('/', [ShortcodeController::class, 'index']);
+
+Route::post(
+    '/parse',
+    [ShortcodeController::class, 'parse']
+);
+
+```
+
+#### Explanation: 
+
+Defines URLs for opening page and submitting form.
+
+Connects browser requests to controller methods.
+
+
+
+## STEP 9: Create Blade UI
+
+
+### resources/views/shortcodes/index.blade.php
+
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel Shortcode Studio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #0f172a;
+            font-family: 'Inter', sans-serif;
+            color: #e5e7eb;
+        }
+
+        /* TOP BAR */
+        .topbar {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            padding: 18px 30px;
+            border-bottom: 1px solid #1f2937;
+        }
+
+        .topbar h1 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0;
+            color: #f8fafc;
+        }
+
+        .topbar span {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        /* MAIN CONTAINER */
+        .container-box {
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        /* GRID */
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        @media(max-width: 768px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* CARD STYLE */
+        .card-box {
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #94a3b8;
+            margin-bottom: 10px;
+        }
+
+        /* TEXTAREA EDITOR */
+        textarea {
+            width: 100%;
+            background: #0b1220;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            padding: 15px;
+            min-height: 280px;
+            color: #e5e7eb;
+            font-family: monospace;
+            font-size: 13px;
+            outline: none;
+        }
+
+        textarea:focus {
+            border-color: #38bdf8;
+            box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+        }
+
+        /* BUTTON */
+        .btn-run {
+            margin-top: 15px;
+            width: 100%;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-run:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+        }
+
+        /* =========================
+           MODERN OUTPUT UI
+        ========================== */
+
+        .modern-output {
+            background: #0b1220;
+            border: 1px solid #1f2937;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .output-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: #111827;
+            border-bottom: 1px solid #1f2937;
+            font-size: 13px;
+            font-weight: 600;
+            color: #94a3b8;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #22c55e;
+        }
+
+        .output-body {
+            padding: 18px;
+            min-height: 280px;
+            color: #e5e7eb;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #64748b;
+        }
+
+        .empty-state .icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .output-body .alert {
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .output-body .btn {
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <h1>📘 Laravel Shortcode Studio</h1>
+        <span>Convert shortcodes into dynamic HTML output</span>
+    </div>
+
+    <div class="container container-box">
+
+        <form method="POST" action="/parse">
+            @csrf
+
+            <div class="layout">
+
+                <!-- INPUT -->
+                <div class="card-box">
+
+                    <div class="label">✏️ Shortcode Editor</div>
+
+                    <textarea name="content">
+{{ $content ?? '[alert]Welcome to Laravel Shortcode Studio[/alert]
+
+[badge]New Feature[/badge]
+
+[button url="https://laravel.com"]Explore Laravel[/button]' }}
+                    </textarea>
+
+                    <button class="btn-run">
+                        ▶ Run Shortcode Parser
+                    </button>
+
+                </div>
+
+                <!-- OUTPUT (UPDATED ONLY THIS SECTION UI) -->
+                <div class="card-box">
+
+                    <div class="label">📄 Rendered Preview</div>
+
+                    <div class="modern-output">
+
+                        <div class="output-header">
+                            <span>📄 Live Preview</span>
+                            <span class="status-dot"></span>
+                        </div>
+
+                        <div class="output-body">
+
+                            @isset($parsedContent)
+                                {!! $parsedContent !!}
+                            @else
+                                <div class="empty-state">
+                                    <div class="icon">⚡</div>
+                                    <p>Run parser to see output here</p>
+                                </div>
+                            @endisset
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
+ 
+```
+
+
+
+#### Explanation: 
+
+Builds frontend interface for editor and preview.
+
+Shows input area and rendered shortcode output.
+
+
+
+
+## STEP 10: Run the Application  
+
+### Start dev server:
+
+```
+php artisan serve
+
+```
+
+
+### Open in browser:
+
+```
+http://127.0.0.1:8000
+
+```
+
+#### Explanation:
+
+Starts Laravel development server using Artisan.
+
+Allows testing project in browser at localhost.
+
+
+
+## Expected Output:
+
+<img width="1911" height="951" alt="Screenshot 2026-06-19 164505" src="https://github.com/user-attachments/assets/057e5ebc-3735-4751-935d-8de4d968b6a1" />
+
+<img width="1914" height="950" alt="Screenshot 2026-06-19 175532" src="https://github.com/user-attachments/assets/de351b2a-799c-4f68-af60-cfb55e7d2cee" />
+
+
+---
+
+
+
+## Project Folder Structure
+
+```
+PHP_Laravel10_Shortcodes/
+│
+├── app/
+│   ├── Http/
+│   │   └── Controllers/
+│   │       └── ShortcodeController.php
+│   │
+│   ├── Providers/
+│   │   └── AppServiceProvider.php
+│   │
+│   └── Shortcodes/
+│       ├── AlertShortcode.php
+│       ├── ButtonShortcode.php
+│       └── BadgeShortcode.php
+│
+├── config/
+│   └── shortcode.php
+│
+├── resources/
+│   └── views/
+│       └── shortcodes/
+│           └── index.blade.php
+│
+├── routes/
+│   └── web.php
+│
+├── database/
+│   ├── migrations/
+│   └── seeders/
+│
+├── public/
+│   └── (assets)
+│
+├── vendor/
+│   └── (composer packages)
+│
+├── .env
+├── composer.json
+├── package.json
+├── artisan
+└── README.md
+```
