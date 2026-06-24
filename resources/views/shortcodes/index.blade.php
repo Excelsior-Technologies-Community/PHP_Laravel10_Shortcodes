@@ -184,13 +184,17 @@
 
                     <div class="label">✏️ Shortcode Editor</div>
 
-                    <textarea name="content">
-{{ $content ?? '[alert]Welcome to Laravel Shortcode Studio[/alert]
+                    <textarea name="content">{{ $content ?? '[alert]Welcome to Laravel Shortcode Studio[/alert]
 
 [badge]New Feature[/badge]
 
-[button url="https://laravel.com"]Explore Laravel[/button]' }}
-                    </textarea>
+[button url="https://laravel.com"]
+Explore Laravel
+[/button]
+
+[card title="Laravel Shortcode"]
+Dynamic card shortcode example
+[/card]' }}</textarea>
 
                     <button class="btn-run">
                         ▶ Run Shortcode Parser
@@ -213,12 +217,12 @@
                         <div class="output-body">
 
                             @isset($parsedContent)
-                                {!! $parsedContent !!}
+                            {!! $parsedContent !!}
                             @else
-                                <div class="empty-state">
-                                    <div class="icon">⚡</div>
-                                    <p>Run parser to see output here</p>
-                                </div>
+                            <div class="empty-state">
+                                <div class="icon">⚡</div>
+                                <p>Run parser to see output here</p>
+                            </div>
                             @endisset
 
                         </div>
@@ -230,6 +234,64 @@
             </div>
 
         </form>
+
+    </div>
+
+    <!-- HISTORY START HERE -->
+
+    <div class="container mt-5">
+
+        <div class="card-box">
+
+            <h3>
+                📚 Shortcode History
+            </h3>
+
+            @foreach($history ?? [] as $item)
+
+
+            <div class="border p-3 mb-3 rounded">
+
+
+                <small class="text-secondary">
+                    {{ $item->created_at }}
+                </small>
+
+                <br><br>
+
+                <pre class="text-white">{{ $item->shortcode_content }}</pre>
+
+                <a
+                    href="/history/{{$item->id}}"
+                    class="btn btn-sm btn-primary">
+
+                    View
+
+                </a>
+
+                <form
+                    method="POST"
+                    action="{{ url('history/'.$item->id) }}"
+                    style="display:inline-block">
+
+                    @csrf
+                    @method('DELETE')
+
+                    <button
+                        type="submit"
+                        class="btn btn-sm btn-danger">
+
+                        Delete
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            @endforeach
+
+        </div>
 
     </div>
 
